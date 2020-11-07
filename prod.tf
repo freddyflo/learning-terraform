@@ -90,12 +90,6 @@ resource "aws_elb" "prod_web" {
         lb_port           = 80
         lb_protocol       = "http"
     }
-<<<<<<< HEAD
-
-
-resource "aws_eip" "prod_web" {
-=======
-=======
 
 resource "aws_eip" "prod_web" {
     tags = {
