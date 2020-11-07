@@ -90,9 +90,5 @@ resource "aws_elb" "prod_web" {
         lb_port           = 80
         lb_protocol       = "http"
     }
-
-resource "aws_eip" "prod_web" {
-    tags = {
-        "Terraform": "true"
-    }
 }
+
