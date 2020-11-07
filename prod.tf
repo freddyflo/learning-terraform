@@ -71,6 +71,7 @@ resource "aws_eip_association" "prod_web" {
     instance_id    = aws_instance.prod_web[0].id
     allocation_id  = aws_eip.prod_web.id
 }
+<<<<<<< HEAD
 
 resource "aws_eip" "prod_web" {
     tags = {
@@ -90,6 +91,10 @@ resource "aws_elb" "prod_web" {
         lb_port           = 80
         lb_protocol       = "http"
     }
+=======
+
+resource "aws_eip" "prod_web" {
+>>>>>>> 97d9b2b931e53fcaf155984e6162a8478505f4eb
     tags = {
         "Terraform": "true"
     }
