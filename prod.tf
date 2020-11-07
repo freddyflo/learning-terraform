@@ -72,6 +72,7 @@ resource "aws_eip_association" "prod_web" {
     allocation_id  = aws_eip.prod_web.id
 }
 
+
 resource "aws_eip" "prod_web" {
     tags = {
         "Terraform": "true"
@@ -90,8 +91,10 @@ resource "aws_elb" "prod_web" {
         lb_port           = 80
         lb_protocol       = "http"
     }
+
+
+resource "aws_eip" "prod_web" {
     tags = {
         "Terraform": "true"
     }
 }
-
